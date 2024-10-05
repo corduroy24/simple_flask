@@ -6,6 +6,8 @@ model = pickle.load(open('expense_model.pkl','rb')) #read mode
 def home():
     return render_template('index.html')
 @app.route("/predict", methods=['GET','POST'])
+
+
 def predict():
     if request.method == 'POST':
         #access the data from form
@@ -23,3 +25,4 @@ def predict():
         return render_template("index.html", prediction_text='Your predicted annual Healthcare Expense is $ {}'.format(output))
 if __name__ == "__main__":
     app.run(debug=True)
+
