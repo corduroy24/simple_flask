@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades</title>
+</head>
+<body>
+    <h1>Student Grades</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Grade</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.grade }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
